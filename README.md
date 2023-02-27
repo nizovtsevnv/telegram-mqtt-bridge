@@ -66,7 +66,7 @@ To set up options use environment variables:
 * (optional) **TELEGRAM_POLLING_TIMEOUT** - polling request timeout, default value - **60** seconds
 * (required) **TELEGRAM_TOKEN** - authentication token for [Telegram Bot API](https://t.me/botfather)
 
-You can make static executable with [reconfigured Docker Alpine builder image, run in your console:
+You can make static executable with preconfigured Docker Alpine builder image, run in your console:
 ```
 bin/build-static-executable
 ```
