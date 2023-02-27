@@ -1,5 +1,5 @@
 [package]
-name = "telegram-mqtt-gateway"
+name = "telegram-mqtt-bridge"
 version = "0.1.0"
 edition = "2021"
 
