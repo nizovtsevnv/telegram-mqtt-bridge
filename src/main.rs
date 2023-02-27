@@ -207,7 +207,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
                                                     }
                                                 }
 
-                                                // Обновление минимального требуемого идентификатора события для следующего запроса
+                                                // Update minimal event identifier for requesting from Telegram Bot API
                                                 telegram_update_id = update_id + 1;
                                             }
                                             None => {
