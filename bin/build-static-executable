@@ -6,7 +6,7 @@ mkdir -p target/cargo/registry
 # Initialize builder Docker image with Rust and MUSL
 docker build -t telegram-mqtt-bridge-builder .
 
-# Компиляция статически линкованного исполняемого файла проекта
+# Build statically linked executable file
 docker run -ti --rm \
     -e RUSTFLAGS="-C target-feature=+crt-static -C link-self-contained=yes -L native=/usr/lib -l static=crypto -l static=ssl" \
     -v ./target/cargo/registry:/usr/local/cargo/registry \
