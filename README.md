@@ -50,6 +50,7 @@ $ RUST_LOG=info TELEGRAM_TOKEN=CHANGE_IT_TO_YOUR_VALUE QUEUE_HOST=localhost QUEU
 ```
 
 To set up options use environment variables:
+* (optional) **CLIENT_ID** - identifier on MQTT broker, default value - "**telegram-mqtt-bridge**"
 * (optional) **QUEUE_HOST** - MQTT broker, default value - "**localhost**"
 * (optional) **QUEUE_POLLING_TIMEOUT** - polling request timeout, default value - **60** seconds
 * (optional) **QUEUE_PORT** - MQTT broker port, default value - **1883**
