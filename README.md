@@ -34,7 +34,9 @@
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Rust](https://www.rust-lang.org/tools/install) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Rust](https://www.rust-lang.org/tools/install) installed on your computer.
+
+From your command line:
 
 ```bash
 # Clone this repository
@@ -44,8 +46,18 @@ $ git clone https://github.com/nizovtsevnv/telegram-mqtt-bridge
 $ cd telegram-mqtt-bridge
 
 # Install dependencies and run the app
-$ RUST_LOG=info TELEGRAM_TOKEN=1234567890 QUEUE_HOST=localhost QUEUE_PORT=1883 SEND_TO_TELEGRAM=messages-to-telegram SEND_TO_QUEUE=messages-from-telegram cargo run
+$ RUST_LOG=info TELEGRAM_TOKEN=CHANGE_IT_TO_YOUR_VALUE QUEUE_HOST=localhost QUEUE_PORT=1883 SEND_TO_TELEGRAM=messages-to-telegram SEND_TO_QUEUE=messages-from-telegram cargo run
 ```
+
+To set up options use environment variables:
+* (optional) **QUEUE_HOST** - MQTT broker, default value - "**localhost**"
+* (optional) **QUEUE_POLLING_TIMEOUT** - polling request timeout, default value - **60** seconds
+* (optional) **QUEUE_PORT** - MQTT broker port, default value - **1883**
+* (optional) **RUST_LOG** - logging level, default value - "**error**"
+* (optional) **SEND_TO_QUEUE** - queue name for messages from Telegram to MQTT, default value - "**messages-from-telegram**"
+* (optional) **SEND_TO_TELEGRAM** - queue name for messages from MQTT to Telegram, default value - "**messages-to-telegram**"
+* (optional) **TELEGRAM_POLLING_TIMEOUT** - polling request timeout, default value - **60** seconds
+* (required) **TELEGRAM_TOKEN** - authentication token for [Telegram Bot API](https://t.me/botfather)
 
 ## Support
 
