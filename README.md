@@ -46,7 +46,13 @@ $ git clone https://github.com/nizovtsevnv/telegram-mqtt-bridge
 $ cd telegram-mqtt-bridge
 
 # Install dependencies and run the app
-$ RUST_LOG=info TELEGRAM_TOKEN=CHANGE_IT_TO_YOUR_VALUE QUEUE_HOST=localhost QUEUE_PORT=1883 SEND_TO_TELEGRAM=messages-to-telegram SEND_TO_QUEUE=messages-from-telegram cargo run
+$ RUST_LOG=info \
+  TELEGRAM_TOKEN=CHANGE_IT_TO_YOUR_VALUE \
+  QUEUE_HOST=localhost \
+  QUEUE_PORT=1883 \
+  SEND_TO_TELEGRAM=messages-to-telegram \
+  SEND_TO_QUEUE=messages-from-telegram \
+  cargo run
 ```
 
 To set up options use environment variables:
